@@ -70,10 +70,14 @@ int calculate()
         
         pennies = total / 0.01;
         total = total - (float(pennies) * 0.01);
+        
+        if (total > 0.00){
+            pennies++; // to account for imperfect decimal caused by computer
+        }
     }
     
     // Output statement for coin amounts
-    cout<<quarters<<" quarters "<<dimes<<" dimes "<<nickels<<" nickels "<<pennies<<" pennies "<<endl;
+    cout<<quarters<<" quarters, "<<dimes<<" dimes, "<<nickels<<" nickels, "<<pennies<<" pennies "<<endl;
     
     return 0;
 }
