@@ -42,6 +42,6 @@ int main()
     cents = 100 * (float(sum) - int(sum));
     
     // Response statement
-    cout<<"The total is "<<(int(sum) / 1.00)<<" dollars and "<<cents<< " cents."<<endl;
+    cout<<"The total is "<<(int(sum) / 1.00)<<" dollars and "<<cents<< " cents"<<endl;
     
 }
