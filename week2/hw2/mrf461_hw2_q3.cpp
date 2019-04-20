@@ -6,7 +6,6 @@
 //  Copyright © 2019 Matthew Femia. All rights reserved.
 //
 //
-// TODO: Refactor
 
 
 #include <iostream>
@@ -50,8 +49,6 @@ int main()
         days = days + (hours / 24);
         hours = hours % 24;
     }
-    
-    // TODO: minutes > 60 cornercase?
     
     cout<<"The total time both of them have worked together is: "<<days<<" days, "<<hours<<" hours and "<<mins<<" minutes."<<endl;
 }

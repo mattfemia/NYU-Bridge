@@ -11,7 +11,7 @@
 #include <iostream>
 using namespace std;
 
-int change();
+int coins();
 
 int quarters = 0;
 int dimes = 0;
@@ -29,7 +29,7 @@ int main()
         cout<<"Please enter number of coins:"<<endl;
         
         // Retrieve values for each coin
-        change();
+        coins();
     }
     // Calculation;
     sum = (quarters * 0.25) + (dimes * 0.10) + (nickles * 0.05) + (pennies * 0.01);
@@ -42,7 +42,7 @@ int main()
 }
 
 // Function to nest inside of 'main' while loop
-int change()
+int coins()
 {
     // Quarters
     cout<<"# of quarters: ";
