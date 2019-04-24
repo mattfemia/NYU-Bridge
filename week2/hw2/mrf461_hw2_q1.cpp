@@ -6,7 +6,6 @@
 //  Copyright © 2019 Matthew Femia. All rights reserved.
 //
 
-// Code refactored
 
 #include <iostream>
 using namespace std;
