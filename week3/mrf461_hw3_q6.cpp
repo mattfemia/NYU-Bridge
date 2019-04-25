@@ -16,15 +16,9 @@ int main() {
     int st_hour, st_min;
     int end_hour, end_min;
     char dot;
-    char sign;
-    
     int st_time;
     int end_time;
-    int call_len;
-    int dollars;
-    int cents;
-    int day_st, day_end;
-    int night_st, night_en;
+    int cost
     
     // Prompt user for details of the call
     cout<<"Please enter day of the week the call was made. Use the following two-letter codes:"<<endl;
@@ -59,11 +53,21 @@ int main() {
     
     // Determine cost of call based on start time
     if (day == "Mo" || day == "Tu" || day == "We" || day == "Th" || day == "Fr") {
-        // week day/night cost
+        if (st_time >= day_st && st_time <= day_end) {
+            cost = float(end_time - st_time) * 0.40
+            
+        }
+        else {
+            cost = float(end_time - st_time) * 0.25
+        }
     }
     else {
-        // weekend cost
+        cost = float(end_time - st_time) * 0.15
     }
     
+    // Output the cost of the call
+    cout<<"The cost of the call is $"<<cost<<endl;
+    
+    return 0;
     
 }
