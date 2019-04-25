@@ -31,31 +31,36 @@ int main() {
     cout<<"Please enter value of c: ";
     cin>>c;
     
-    /* Quadratic equation calculations */
-    
-    // Calculation of the discriminant (D)
-    D = sqrt((pow(b, 2)) - (4 * a * c));
-    
-    if (D > 0)
-    {
-        discriminant = "positive";
+    if (a == 0 && b == 0 && c == 0) {
+        cout<<"This equation has infinite number of solutions"<<endl;
     }
-    else if (D < 0)
-    {
-        discriminant = "negative";
+    else if (a == 0 && b == 0 && c != 0) {
+        cout<<"This equation has no real solution"<<endl;
     }
-    else
-    {
-        discriminant = "zero";
+    else {
+        /* Quadratic equation calculations */
+        
+        // Calculation of the discriminant (D)
+        D = sqrt((pow(b, 2)) - (4 * a * c));
+        
+        if (a != 0) {
+            if (D > 0) {
+                discriminant = "This equation has two real solutions ";
+                x1 = ( (-b + D) / (2 * a) ); // Positive term (x1)
+                x2 = ( (-b - D) / (2 * a) ); // Negatie term (x2)
+                cout<<discriminant<<"x = "<<x1<<", "<<x2<<endl;
+            }
+            else if (D < 0) {
+                discriminant = "This equation has no real solutions ";
+                cout<<discriminant<<endl;
+            }
+            else {
+                discriminant = "This equation has a single real solution ";
+                x1 = ( (-b + D) / (2 * a) ); // Single term x1
+                cout<<discriminant<<"x = "<<x1<<endl;
+            }
+        }
     }
     
-    // Positive term (x1)
-    x1 = ( (-b + D) / (2 * a) );
-    
-    // Negatie term (x2)
-    x2 = ( (-b - D) / (2 * a) );
-    
-    // Calculate if x-values are real numbers
-    cout<<isnan(x1);
-    cout<<isnan(x2);
+    return 0;
 }
