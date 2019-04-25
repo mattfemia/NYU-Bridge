@@ -18,7 +18,10 @@ int main() {
     char dot;
     int st_time;
     int end_time;
-    int cost
+    float cost;
+    int day_st;
+    int day_end;
+    
     
     // Prompt user for details of the call
     cout<<"Please enter day of the week the call was made. Use the following two-letter codes:"<<endl;
@@ -35,7 +38,7 @@ int main() {
     cin>>st_hour>>dot>>st_min;
     
     cout<<"Please enter the time the call ended in 24h format: ";
-    cin>>end_hour>>dot>>st_min;
+    cin>>end_hour>>dot>>end_min;
     
     /* Convert time values to comparative value system (total minutes) */
     
@@ -47,27 +50,21 @@ int main() {
     day_st = 8 * 60;
     day_end = (17 * 60) - 1;
     
-    //Night cycle conversion
-    night_st = 18 * 60;
-    night_end = (8 * 60) - 1;
-    
     // Determine cost of call based on start time
     if (day == "Mo" || day == "Tu" || day == "We" || day == "Th" || day == "Fr") {
         if (st_time >= day_st && st_time <= day_end) {
-            cost = float(end_time - st_time) * 0.40
+            cost = float(end_time - st_time) * 0.40;
             
         }
         else {
-            cost = float(end_time - st_time) * 0.25
+            cost = float(end_time - st_time) * 0.25;
         }
     }
     else {
-        cost = float(end_time - st_time) * 0.15
+        cost = float(end_time - st_time) * 0.15;
     }
     
-    // Output the cost of the call
     cout<<"The cost of the call is $"<<cost<<endl;
     
-    return 0;
     
 }
