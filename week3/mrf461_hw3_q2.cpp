@@ -54,5 +54,5 @@ int main()
         cout<<"Error"<<endl;
     }
     
-    // TODO: use array of status names to index
+    return 0;
 }

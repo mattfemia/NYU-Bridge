@@ -70,5 +70,6 @@ int main()
     totalP = discountP + (discountP * taxRate);
     
     cout<<"Total price: "<<totalP<<endl;
-    // TODO: Fix decimal
+    
+    return 0;
 }

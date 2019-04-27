@@ -66,5 +66,5 @@ int main() {
     
     cout<<"The cost of the call is $"<<cost<<endl;
     
-    
+    return 0;
 }
