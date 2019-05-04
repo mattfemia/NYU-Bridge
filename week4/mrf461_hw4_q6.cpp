@@ -10,9 +10,6 @@
 
 using namespace std;
 
-int numList;
-int evens = 0;
-int odds = 0;
 int number;
 
 int main()
@@ -20,19 +17,37 @@ int main()
     cout<<"Please input a positive integer: ";
     cin>>number;
     
-    //CONVERT NUMBER OF DIGISTS IN NUMBER TO INT
-    //    length = strlen(string(number))
+    // Iterate over numbers
+    for (int x=1; x <= number; x++){
+        int evens = 0;
+        int odds = 0;
+        int length = 0;
+        
+        cout<<"number is "<<x<<endl;
+        
+        // Find the number of digits in 'number'
+        int temp_num = number;
+        while (temp_num) {
+            temp_num = temp_num / 10;
+            length++;
+        }
+        
+        // Iterate over digits
+        for (int y=1; y < length; y++) {
+            int digit = x % 10;
+            
+            if ( (digit % 2) == 0) {
+                evens++;
+            }
+            else {
+                odds++;
+            }
+            
+            if (evens > odds) {
+                cout<<x<<endl;
+            }
+        }
+    }
     
-    
-    // ITERATE THROUGH NUMBERS UP TO USER NUMBER
-    //    for (int x=0; x<=number; x++) {
-    
-    // ITERATE OVER DIGITS IN NUMBER
-    //        for (int y=1; y<=length; y++)
-    
-    //CHECK IF EACH DIGIT IS EVEN OR ODD
-    //
-    // INCREMENT THE 'EVENS' AND 'ODDS' COUNTERS
-    
-    // PRINT TO THE CONSOLE IF EVENS > ODDS
+    cout<<endl;
 }
