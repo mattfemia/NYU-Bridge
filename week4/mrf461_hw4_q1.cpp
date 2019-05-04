@@ -12,7 +12,6 @@ using namespace std;
 
 int main()
 {
-    // Initialize iterator variable 'i' and parameter variable 'n'
     int n = 0;
     int i = 1;
     
