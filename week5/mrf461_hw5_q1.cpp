@@ -1,6 +1,5 @@
 //
 //  mrf461_hw5_q1.cpp
-//  practice1
 //
 //  Created by Matthew Femia on 5/7/19.
 //  Copyright © 2019 Matthew Femia. All rights reserved.
@@ -34,4 +33,6 @@ int multTable(int number) {
         cout<<endl;
     }
     cout<<endl;
+    
+    return 0;
 }
