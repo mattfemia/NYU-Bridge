@@ -48,24 +48,13 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/matthewfemia/Developer/NYU-Bridge/week5/Test
+CMAKE_SOURCE_DIR = /Users/matthewfemia/Desktop/Test1
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/matthewfemia/Developer/NYU-Bridge/week5/Test/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/matthewfemia/Desktop/Test1/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
-
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -78,11 +67,22 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
+
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/matthewfemia/Developer/NYU-Bridge/week5/Test/cmake-build-debug/CMakeFiles /Users/matthewfemia/Developer/NYU-Bridge/week5/Test/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/matthewfemia/Desktop/Test1/cmake-build-debug/CMakeFiles /Users/matthewfemia/Desktop/Test1/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/matthewfemia/Developer/NYU-Bridge/week5/Test/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/matthewfemia/Desktop/Test1/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,30 +111,56 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named testing.cpp
+# Target rules for targets named mrf461_test1_q12.cpp
 
 # Build rule for target.
-testing.cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 testing.cpp
-.PHONY : testing.cpp
+mrf461_test1_q12.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mrf461_test1_q12.cpp
+.PHONY : mrf461_test1_q12.cpp
 
 # fast build rule for target.
-testing.cpp/fast:
-	$(MAKE) -f CMakeFiles/testing.cpp.dir/build.make CMakeFiles/testing.cpp.dir/build
-.PHONY : testing.cpp/fast
+mrf461_test1_q12.cpp/fast:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q12.cpp.dir/build.make CMakeFiles/mrf461_test1_q12.cpp.dir/build
+.PHONY : mrf461_test1_q12.cpp/fast
 
 #=============================================================================
-# Target rules for targets named Test
+# Target rules for targets named mrf461_test1_q11.cpp
 
 # Build rule for target.
-Test: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Test
-.PHONY : Test
+mrf461_test1_q11.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mrf461_test1_q11.cpp
+.PHONY : mrf461_test1_q11.cpp
 
 # fast build rule for target.
-Test/fast:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/build
-.PHONY : Test/fast
+mrf461_test1_q11.cpp/fast:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q11.cpp.dir/build.make CMakeFiles/mrf461_test1_q11.cpp.dir/build
+.PHONY : mrf461_test1_q11.cpp/fast
+
+#=============================================================================
+# Target rules for targets named mrf461_test1_q1toq10
+
+# Build rule for target.
+mrf461_test1_q1toq10: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mrf461_test1_q1toq10
+.PHONY : mrf461_test1_q1toq10
+
+# fast build rule for target.
+mrf461_test1_q1toq10/fast:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q1toq10.dir/build.make CMakeFiles/mrf461_test1_q1toq10.dir/build
+.PHONY : mrf461_test1_q1toq10/fast
+
+#=============================================================================
+# Target rules for targets named Test1
+
+# Build rule for target.
+Test1: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Test1
+.PHONY : Test1
+
+# fast build rule for target.
+Test1/fast:
+	$(MAKE) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/build
+.PHONY : Test1/fast
 
 main.o: main.cpp.o
 
@@ -142,7 +168,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.cpp.o
+	$(MAKE) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -151,7 +177,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.cpp.i
+	$(MAKE) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -160,35 +186,89 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) -f CMakeFiles/Test.dir/build.make CMakeFiles/Test.dir/main.cpp.s
+	$(MAKE) -f CMakeFiles/Test1.dir/build.make CMakeFiles/Test1.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-testing.o: testing.cpp.o
+mrf461_test1_q11.o: mrf461_test1_q11.cpp.o
 
-.PHONY : testing.o
+.PHONY : mrf461_test1_q11.o
 
 # target to build an object file
-testing.cpp.o:
-	$(MAKE) -f CMakeFiles/testing.cpp.dir/build.make CMakeFiles/testing.cpp.dir/testing.cpp.o
-.PHONY : testing.cpp.o
+mrf461_test1_q11.cpp.o:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q11.cpp.dir/build.make CMakeFiles/mrf461_test1_q11.cpp.dir/mrf461_test1_q11.cpp.o
+.PHONY : mrf461_test1_q11.cpp.o
 
-testing.i: testing.cpp.i
+mrf461_test1_q11.i: mrf461_test1_q11.cpp.i
 
-.PHONY : testing.i
+.PHONY : mrf461_test1_q11.i
 
 # target to preprocess a source file
-testing.cpp.i:
-	$(MAKE) -f CMakeFiles/testing.cpp.dir/build.make CMakeFiles/testing.cpp.dir/testing.cpp.i
-.PHONY : testing.cpp.i
+mrf461_test1_q11.cpp.i:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q11.cpp.dir/build.make CMakeFiles/mrf461_test1_q11.cpp.dir/mrf461_test1_q11.cpp.i
+.PHONY : mrf461_test1_q11.cpp.i
 
-testing.s: testing.cpp.s
+mrf461_test1_q11.s: mrf461_test1_q11.cpp.s
 
-.PHONY : testing.s
+.PHONY : mrf461_test1_q11.s
 
 # target to generate assembly for a file
-testing.cpp.s:
-	$(MAKE) -f CMakeFiles/testing.cpp.dir/build.make CMakeFiles/testing.cpp.dir/testing.cpp.s
-.PHONY : testing.cpp.s
+mrf461_test1_q11.cpp.s:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q11.cpp.dir/build.make CMakeFiles/mrf461_test1_q11.cpp.dir/mrf461_test1_q11.cpp.s
+.PHONY : mrf461_test1_q11.cpp.s
+
+mrf461_test1_q12.o: mrf461_test1_q12.cpp.o
+
+.PHONY : mrf461_test1_q12.o
+
+# target to build an object file
+mrf461_test1_q12.cpp.o:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q12.cpp.dir/build.make CMakeFiles/mrf461_test1_q12.cpp.dir/mrf461_test1_q12.cpp.o
+.PHONY : mrf461_test1_q12.cpp.o
+
+mrf461_test1_q12.i: mrf461_test1_q12.cpp.i
+
+.PHONY : mrf461_test1_q12.i
+
+# target to preprocess a source file
+mrf461_test1_q12.cpp.i:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q12.cpp.dir/build.make CMakeFiles/mrf461_test1_q12.cpp.dir/mrf461_test1_q12.cpp.i
+.PHONY : mrf461_test1_q12.cpp.i
+
+mrf461_test1_q12.s: mrf461_test1_q12.cpp.s
+
+.PHONY : mrf461_test1_q12.s
+
+# target to generate assembly for a file
+mrf461_test1_q12.cpp.s:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q12.cpp.dir/build.make CMakeFiles/mrf461_test1_q12.cpp.dir/mrf461_test1_q12.cpp.s
+.PHONY : mrf461_test1_q12.cpp.s
+
+mrf461_test1_q1toq10.o: mrf461_test1_q1toq10.cpp.o
+
+.PHONY : mrf461_test1_q1toq10.o
+
+# target to build an object file
+mrf461_test1_q1toq10.cpp.o:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q1toq10.dir/build.make CMakeFiles/mrf461_test1_q1toq10.dir/mrf461_test1_q1toq10.cpp.o
+.PHONY : mrf461_test1_q1toq10.cpp.o
+
+mrf461_test1_q1toq10.i: mrf461_test1_q1toq10.cpp.i
+
+.PHONY : mrf461_test1_q1toq10.i
+
+# target to preprocess a source file
+mrf461_test1_q1toq10.cpp.i:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q1toq10.dir/build.make CMakeFiles/mrf461_test1_q1toq10.dir/mrf461_test1_q1toq10.cpp.i
+.PHONY : mrf461_test1_q1toq10.cpp.i
+
+mrf461_test1_q1toq10.s: mrf461_test1_q1toq10.cpp.s
+
+.PHONY : mrf461_test1_q1toq10.s
+
+# target to generate assembly for a file
+mrf461_test1_q1toq10.cpp.s:
+	$(MAKE) -f CMakeFiles/mrf461_test1_q1toq10.dir/build.make CMakeFiles/mrf461_test1_q1toq10.dir/mrf461_test1_q1toq10.cpp.s
+.PHONY : mrf461_test1_q1toq10.cpp.s
 
 # Help Target
 help:
@@ -196,16 +276,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... testing.cpp"
-	@echo "... Test"
+	@echo "... mrf461_test1_q12.cpp"
+	@echo "... mrf461_test1_q11.cpp"
+	@echo "... rebuild_cache"
+	@echo "... mrf461_test1_q1toq10"
+	@echo "... Test1"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... testing.o"
-	@echo "... testing.i"
-	@echo "... testing.s"
+	@echo "... mrf461_test1_q11.o"
+	@echo "... mrf461_test1_q11.i"
+	@echo "... mrf461_test1_q11.s"
+	@echo "... mrf461_test1_q12.o"
+	@echo "... mrf461_test1_q12.i"
+	@echo "... mrf461_test1_q12.s"
+	@echo "... mrf461_test1_q1toq10.o"
+	@echo "... mrf461_test1_q1toq10.i"
+	@echo "... mrf461_test1_q1toq10.s"
 .PHONY : help
 
 

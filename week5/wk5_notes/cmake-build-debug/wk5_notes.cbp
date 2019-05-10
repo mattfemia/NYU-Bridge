@@ -17,11 +17,137 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="primalitry2">
+				<Option output="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/primalitry2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 primalitry2"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="primalitry2/fast">
+				<Option output="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/primalitry2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 primalitry2/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="primality3">
+				<Option output="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/primality3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 primality3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="primality3/fast">
+				<Option output="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/primality3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 primality3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
 					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="primality1.cpp">
+				<Option output="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/primality1.cpp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 primality1.cpp"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="primality1.cpp/fast">
+				<Option output="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/primality1.cpp" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include/c++/v1"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/10.0.1/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 primality1.cpp/fast"/>
 					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
 					<Clean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
@@ -82,6 +208,15 @@
 		</Build>
 		<Unit filename="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/main.cpp">
 			<Option target="wk5_notes"/>
+		</Unit>
+		<Unit filename="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/primality1.cpp">
+			<Option target="primality1.cpp"/>
+		</Unit>
+		<Unit filename="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/primality2.cpp">
+			<Option target="primalitry2"/>
+		</Unit>
+		<Unit filename="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/primality3.cpp">
+			<Option target="primality3"/>
 		</Unit>
 		<Unit filename="/Users/matthewfemia/Developer/NYU-Bridge/week5/wk5_notes/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

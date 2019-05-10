@@ -111,6 +111,45 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named primalitry2
+
+# Build rule for target.
+primalitry2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 primalitry2
+.PHONY : primalitry2
+
+# fast build rule for target.
+primalitry2/fast:
+	$(MAKE) -f CMakeFiles/primalitry2.dir/build.make CMakeFiles/primalitry2.dir/build
+.PHONY : primalitry2/fast
+
+#=============================================================================
+# Target rules for targets named primality3
+
+# Build rule for target.
+primality3: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 primality3
+.PHONY : primality3
+
+# fast build rule for target.
+primality3/fast:
+	$(MAKE) -f CMakeFiles/primality3.dir/build.make CMakeFiles/primality3.dir/build
+.PHONY : primality3/fast
+
+#=============================================================================
+# Target rules for targets named primality1.cpp
+
+# Build rule for target.
+primality1.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 primality1.cpp
+.PHONY : primality1.cpp
+
+# fast build rule for target.
+primality1.cpp/fast:
+	$(MAKE) -f CMakeFiles/primality1.cpp.dir/build.make CMakeFiles/primality1.cpp.dir/build
+.PHONY : primality1.cpp/fast
+
+#=============================================================================
 # Target rules for targets named wk5_notes
 
 # Build rule for target.
@@ -150,18 +189,111 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/wk5_notes.dir/build.make CMakeFiles/wk5_notes.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+primality1.o: primality1.cpp.o
+
+.PHONY : primality1.o
+
+# target to build an object file
+primality1.cpp.o:
+	$(MAKE) -f CMakeFiles/primality1.cpp.dir/build.make CMakeFiles/primality1.cpp.dir/primality1.cpp.o
+.PHONY : primality1.cpp.o
+
+primality1.i: primality1.cpp.i
+
+.PHONY : primality1.i
+
+# target to preprocess a source file
+primality1.cpp.i:
+	$(MAKE) -f CMakeFiles/primality1.cpp.dir/build.make CMakeFiles/primality1.cpp.dir/primality1.cpp.i
+.PHONY : primality1.cpp.i
+
+primality1.s: primality1.cpp.s
+
+.PHONY : primality1.s
+
+# target to generate assembly for a file
+primality1.cpp.s:
+	$(MAKE) -f CMakeFiles/primality1.cpp.dir/build.make CMakeFiles/primality1.cpp.dir/primality1.cpp.s
+.PHONY : primality1.cpp.s
+
+primality2.o: primality2.cpp.o
+
+.PHONY : primality2.o
+
+# target to build an object file
+primality2.cpp.o:
+	$(MAKE) -f CMakeFiles/primalitry2.dir/build.make CMakeFiles/primalitry2.dir/primality2.cpp.o
+.PHONY : primality2.cpp.o
+
+primality2.i: primality2.cpp.i
+
+.PHONY : primality2.i
+
+# target to preprocess a source file
+primality2.cpp.i:
+	$(MAKE) -f CMakeFiles/primalitry2.dir/build.make CMakeFiles/primalitry2.dir/primality2.cpp.i
+.PHONY : primality2.cpp.i
+
+primality2.s: primality2.cpp.s
+
+.PHONY : primality2.s
+
+# target to generate assembly for a file
+primality2.cpp.s:
+	$(MAKE) -f CMakeFiles/primalitry2.dir/build.make CMakeFiles/primalitry2.dir/primality2.cpp.s
+.PHONY : primality2.cpp.s
+
+primality3.o: primality3.cpp.o
+
+.PHONY : primality3.o
+
+# target to build an object file
+primality3.cpp.o:
+	$(MAKE) -f CMakeFiles/primality3.dir/build.make CMakeFiles/primality3.dir/primality3.cpp.o
+.PHONY : primality3.cpp.o
+
+primality3.i: primality3.cpp.i
+
+.PHONY : primality3.i
+
+# target to preprocess a source file
+primality3.cpp.i:
+	$(MAKE) -f CMakeFiles/primality3.dir/build.make CMakeFiles/primality3.dir/primality3.cpp.i
+.PHONY : primality3.cpp.i
+
+primality3.s: primality3.cpp.s
+
+.PHONY : primality3.s
+
+# target to generate assembly for a file
+primality3.cpp.s:
+	$(MAKE) -f CMakeFiles/primality3.dir/build.make CMakeFiles/primality3.dir/primality3.cpp.s
+.PHONY : primality3.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
+	@echo "... primalitry2"
+	@echo "... primality3"
 	@echo "... rebuild_cache"
+	@echo "... primality1.cpp"
 	@echo "... edit_cache"
 	@echo "... wk5_notes"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... primality1.o"
+	@echo "... primality1.i"
+	@echo "... primality1.s"
+	@echo "... primality2.o"
+	@echo "... primality2.i"
+	@echo "... primality2.s"
+	@echo "... primality3.o"
+	@echo "... primality3.i"
+	@echo "... primality3.s"
 .PHONY : help
 
 
