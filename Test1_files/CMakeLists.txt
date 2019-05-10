@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.14)
+project(Test)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(Test main.cpp)
+add_executable(testing.cpp testing.cpp)

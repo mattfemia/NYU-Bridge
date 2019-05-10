@@ -1,0 +1,4 @@
+/Users/matthewfemia/Developer/NYU-Bridge/week5/Test/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/matthewfemia/Developer/NYU-Bridge/week5/Test/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/matthewfemia/Developer/NYU-Bridge/week5/Test/cmake-build-debug/CMakeFiles/testing.cpp.dir
+/Users/matthewfemia/Developer/NYU-Bridge/week5/Test/cmake-build-debug/CMakeFiles/Test.dir

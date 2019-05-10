@@ -1,3 +1,0 @@
-/Users/matthewfemia/Developer/NYU-Bridge/week5/CLion/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/Users/matthewfemia/Developer/NYU-Bridge/week5/CLion/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/matthewfemia/Developer/NYU-Bridge/week5/CLion/cmake-build-debug/CMakeFiles/CLion.dir
