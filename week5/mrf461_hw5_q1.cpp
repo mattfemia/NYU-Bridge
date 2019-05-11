@@ -23,12 +23,29 @@ int main() {
     multTable(num);
     return 0;
 }
-
+// Implement multiplacation table
 int multTable(int number) {
     for (int x=1; x <= number; x++) {
         
         for (int y=1; y<=number; y++) {
-            cout<<x * y<<"     ";
+            int result = x * y;
+            
+            // Fix spacing between numbers in tables
+            if (result < 10) {
+                cout<<result<<"    ";
+            }
+            else if (result >= 10 && result < 100) {
+                cout<<result<<"   ";
+            }
+            else if (result >= 100 && result < 1000) {
+                cout<<result<<"  ";
+            }
+            else if (result >= 1000 && result < 10000) {
+                cout<<result<<" ";
+            }
+            else {
+                cout<<result;
+            }
         }
         cout<<endl;
     }
