@@ -38,6 +38,5 @@ int analyzeDigits(int num, int& outSum){
         num = num / 10;
     }
     
-    outSum = sum;
     return count;
 }
