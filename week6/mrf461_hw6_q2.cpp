@@ -22,39 +22,45 @@ int main(){
     cout<<"Please enter a symbol character: ";
     cin>>symbol;
     
+    printPineTree(n, symbol);
+    cout<<endl<<endl;
     printShiftedTriangle(n, m, symbol);
     
     return 0;
 }
 
 void printShiftedTriangle(int n, int m, char symbol){
-    
-    
-    for (int w=1; w <= m; w++){
+    // Shifted spaces for top of triangle
+    for(int j=0; j <= (m + n -2); j++){
         cout<<" ";
     }
-    printPineTree(n, symbol);
-    cout<<endl;
+    // Top of tree
+    for (int y=1; y < n; y++){
+        cout<<symbol<<endl;
+        // Spaces for bottom rows of triangle
+        for(int j=n+m; j > y+1; j--){
+            cout<<" ";
+        }
+        // Bottom row of triangle
+        for (int z=1; z<=(2 * y); z++){
+            cout<<symbol;
+        }
+    }
+    cout<<symbol<<endl;
 }
 
 void printPineTree(int n, char symbol){
+    // Redefine parameters
+    int spaces = n - 1;
+    int triangles = n;
     
-    for (int x=1; x <= n; x++){
-        for(int j=n; j >= 1; j--){
-            cout<<" ";
-        }
-        // Individual 'tree' structure
-        for (int y=1; y <= x; y++){
-            cout<<symbol<<endl;
-            
-            for(int j=n; j > y; j--){
-                cout<<" ";
-            }
-            for (int z=1; z<=(2 * y); z++){
-                cout<<symbol;
-            }
-        }
-        cout<<symbol<<endl;
+    // Print 'n' number of triangles in tree
+    for (int i = 1; i <= n; i++){
+        printShiftedTriangle(triangles - 1, spaces, symbol);
+        
+        // Increase triangle while decrease spaces
+        spaces--;
+        triangles++;
     }
+    cout<<endl;
 }
-
