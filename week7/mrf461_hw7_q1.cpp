@@ -11,11 +11,14 @@
 using namespace std;
 
 int printMonthCalendar(int numOfDays, int StartingDay);
+bool leapYear(int year);
+
 
 int main(){
     
     int numOfDays;
     int startingDay;
+    int currentYear;
     
     cout<<"Please enter an integer for number of days in the month: "<<endl;
     cin>>numOfDays;
@@ -23,9 +26,19 @@ int main(){
     cout<<"Please enter a number 1-7 representing the day in the week of the first day in that month (1 for Monday, 2 for Tuesday, 3 for Wednesday): "<<endl;
     cin>>startingDay;
     
+    cout<<"Please enter the current year as an integer: ";
+    cin>>currentYear;
+    
     // Call function
     printMonthCalendar(numOfDays, startingDay);
     
+    bool value = leapYear(currentYear);
+    if (value == true){
+        cout<<"True"<<endl;
+    }
+    else {
+        cout<<"False"<<endl;
+    }
     return 0;
 }
 
@@ -57,7 +70,7 @@ int printMonthCalendar(int numOfDays, int startingDay){
             if (nextWeek >= 10){
                 cout<<nextWeek<<"     ";
             }
-            else{
+            else {
                 cout<<nextWeek<<"      ";
             }
         }
@@ -70,3 +83,21 @@ int printMonthCalendar(int numOfDays, int startingDay){
     return numOfDays;
 }
 
+// Question 1b.
+bool leapYear(int year){
+    // Leap year requirements
+    if ((year % 4 == 0) && (year % 100 != 0)){
+        return true;
+    }
+    
+    else {
+        // Unique coniditional to also find leap year
+        if ((year % 4 == 0) && (year % 400 == 0)){
+            return true;
+        }
+        // Not leap year
+        else {
+            return false;
+        }
+    }
+}
