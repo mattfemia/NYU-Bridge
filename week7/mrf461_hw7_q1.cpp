@@ -10,18 +10,17 @@
 #include <string>
 using namespace std;
 
-int printMonthCalendar(int numOfDays, int StartingDay);
+int printMonthCalendar(int numOfDays, int startingDay);
 bool leapYear(int year);
+void printYearCalendar(int numOfDays, int startingDay);
+void nameCalendar(int year, int startingDay, string name);
 
 
 int main(){
     
-    int numOfDays;
     int startingDay;
     int currentYear;
-    
-    cout<<"Please enter an integer for number of days in the month: "<<endl;
-    cin>>numOfDays;
+    string name;
     
     cout<<"Please enter a number 1-7 representing the day in the week of the first day in that month (1 for Monday, 2 for Tuesday, 3 for Wednesday): "<<endl;
     cin>>startingDay;
@@ -29,16 +28,12 @@ int main(){
     cout<<"Please enter the current year as an integer: ";
     cin>>currentYear;
     
-    // Call function
-    printMonthCalendar(numOfDays, startingDay);
+    cout<<"Please enter your first name: ";
+    cin>>name;
     
-    bool value = leapYear(currentYear);
-    if (value == true){
-        cout<<"True"<<endl;
-    }
-    else {
-        cout<<"False"<<endl;
-    }
+    // Call function
+    nameCalendar(currentYear, startingDay, name);
+    
     return 0;
 }
 
@@ -48,24 +43,30 @@ int printMonthCalendar(int numOfDays, int startingDay){
     cout<<"Mon    Tue    Wed    Thr    Fri    Sat    Sun    "<<endl;
     
     // Print first week of month
-    for (int y=1; y <= (7 - startingDay); y++){
+    for (int y=1; y < (7 - (7 - startingDay)); y++){
         cout<<"       ";
     }
-    for (int x=1; x <= (7 - (startingDay - 1)); x++){
-        cout<<x<<"      ";
+    for (int x=1; x <= (7 - startingDay + 1); x++){
+        cout<<x;
+        cout<<"      ";
     }
     cout<<endl;
     
     // Print the rest of the calendar -- acounting for spacing difference with > 1 digit
-    for (int nextWeek=(7 - (startingDay - 2)); nextWeek <= numOfDays; nextWeek++){
-        if (nextWeek % 7 == startingDay){
+    for (int nextWeek=(7 - startingDay + 2); nextWeek <= numOfDays; nextWeek++){
+        
+        // Account for end of the week == multiples of 7, otherwise account for end of week
+        if ( (startingDay == 1 && nextWeek % 7 == 0) || nextWeek % 7 == (7 - startingDay + 1)){
+            
+            // New line after end of the week
             if (nextWeek >= 10){
-                cout<<nextWeek<<"   "<<endl;;
+                cout<<nextWeek<<"   "<<endl;
             }
             else{
-                cout<<nextWeek<<"    "<<endl;;
+                cout<<nextWeek<<"    "<<endl;
             }
         }
+        // Fill-out the line for the week
         else {
             if (nextWeek >= 10){
                 cout<<nextWeek<<"     ";
@@ -78,10 +79,16 @@ int printMonthCalendar(int numOfDays, int startingDay){
     cout<<endl;
     
     // Print the number for the day of the week
-    numOfDays = (numOfDays - (7 - (startingDay - 1) )) % 7;
+    int newStartDay = (numOfDays - (7 - startingDay)) % 7;
     
-    return numOfDays;
+    // Account for cornercase where [(numOfDays - (7 - startingDay)) % 7] equals a multiple of 7
+    if (newStartDay == 0) {
+        newStartDay = 7;
+    }
+    
+    return newStartDay;
 }
+
 
 // Question 1b.
 bool leapYear(int year){
@@ -91,7 +98,7 @@ bool leapYear(int year){
     }
     
     else {
-        // Unique coniditional to also find leap year
+        // Other possibility for determining leap year
         if ((year % 4 == 0) && (year % 400 == 0)){
             return true;
         }
@@ -100,4 +107,42 @@ bool leapYear(int year){
             return false;
         }
     }
+}
+
+// Question 1c.
+void printYearCalendar(int year, int startingDay){
+    
+    // Print January month and create variable for day at end of month
+    int newStart = printMonthCalendar(31, startingDay);
+    
+    // Start with February and print each month
+    for (int monthCounter = 2; monthCounter <= 12; monthCounter++){
+        bool leap = leapYear(year);
+        
+        // February month w/ or w/o leap year
+        if (monthCounter == 2) {
+            if (leap == true) {
+                newStart = printMonthCalendar(29, newStart);
+            }
+            else {
+                newStart = printMonthCalendar(28, newStart);
+            }
+        }
+        // Months with 31 days
+        else if (monthCounter == 3 || monthCounter == 5 || monthCounter == 7 ||monthCounter == 8 || monthCounter == 10 || monthCounter == 12) {
+            newStart = printMonthCalendar(31, newStart);
+        }
+        // Months with 30 days
+        else {
+            newStart = printMonthCalendar(30, newStart);
+        }
+    }
+}
+
+
+// Question 1d.
+// Add name to the calendar to customize
+void nameCalendar(int year, int startingDay, string name){
+    cout<<endl<<"Year "<<year<<" for "<<name<<endl<<endl;
+    printYearCalendar(year, startingDay);
 }
