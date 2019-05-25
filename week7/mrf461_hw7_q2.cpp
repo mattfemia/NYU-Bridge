@@ -6,4 +6,17 @@
 //  Copyright © 2019 Matthew Femia. All rights reserved.
 //
 
-#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+void analyzeDividors(int num, int &outCountDivs, int &outSomeDivs);
+
+int main(){
+    
+    return 0;
+}
+
+
+void analyzeDividors(int num, int &outCountDivs, int &outSomeDivs){
+    
+}
