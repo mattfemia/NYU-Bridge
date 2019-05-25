@@ -11,20 +11,20 @@
 using namespace std;
 
 void analyzeDividors(int num, int &outCountDivs, int &outSumDivs);
+bool isPerfect(int num);
+void perfectAmicable(int num);
 
 int main(){
     
-    int outCountDivs = 0;
-    int outSumDivs = 0;
-    int num;
+    int num = 0;
     
-    cout<<"Please enter a positive integer: ";
-    cin>>num;
+    // Error check for user-input
+    while (num < 2) {
+        cout<<"Please enter a positive integer greater than 1: ";
+        cin>>num;
+    }
     
-    analyzeDividors(num, outCountDivs, outSumDivs);
-    
-    cout<<outCountDivs<<" "<<outSumDivs<<endl;
-    
+    perfectAmicable(num);
     return 0;
 }
 
@@ -62,10 +62,57 @@ void analyzeDividors(int num, int &outCountDivs, int &outSumDivs){
     }
     // Find dividors & sum for num where (num % 2 != 0)
     else {
-        for (int count = 1; count <= (num / 2); count++){
+        for (int count = 1; count <= floor(double(num / 2)); count++){
             if (num % count == 0){
                 outCountDivs++;
                 outSumDivs += count;
+            }
+        }
+    }
+}
+
+// Question 2b.
+bool isPerfect(int num){
+    int countNums = 0;
+    int sumNums = 0;
+    
+    analyzeDividors(num, countNums, sumNums);
+    
+    // Determine if the number is a perfect number
+    if (sumNums == num){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+// Question 2c.
+void perfectAmicable(int num){
+    
+    // Find and print out the perfect numbers
+    cout<<"Perfect numbers: ";
+    for (int counter = 2; counter <= num; counter++){
+        
+        if (isPerfect(counter) == true){
+            cout<<counter<<" ";
+        }
+    }
+    cout<<endl;
+    
+    // Find and print out the amicable number pairs
+    for (int counter = 2; counter <= num; counter++){
+        int count1 = 0;
+        int sum1 = 0;
+        
+        analyzeDividors(counter, count1, sum1);
+        if (sum1 <= num){
+            int sum2 = 0;
+            int count2 = 0;
+            
+            analyzeDividors(sum1, count2, sum2);
+            if ( (counter != sum1) && (sum2 == counter) && (counter < sum1) ){
+                cout<<"Amicable pair: "<<"("<<counter<<", "<<sum1<<")"<<endl;
             }
         }
     }
