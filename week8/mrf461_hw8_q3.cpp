@@ -15,17 +15,6 @@ void removeOdd(int arr[], int& arrSize);
 void splitParity(int arr[], int arrSize);
 
 int main() {
-    int arr1[10] = {9, 2, 14, 12, -3, 3};
-    
-    int arr2[10] = {21, 12, 6, 7, 14};
-    int arr2Size = 5;
-    
-    reverseArray(arr1, 6);
-    cout<<endl;
-    
-    removeOdd(arr2, arr2Size);
-    cout<<endl;
-    
     return 0;
 }
 
@@ -39,26 +28,45 @@ void reverseArray(int arr[], int arrSize) {
         arr[backward] = temp;
         forward++;
     }
-    
-    for (int iterate = 0; iterate < arrSize; iterate++) {
-        cout<<arr[iterate]<<" ";
-    }
-    cout<<endl;
 }
 
 void removeOdd(int arr[], int& arrSize) {
-    
     for (int iterate=0; iterate < arrSize; iterate++) {
-        if (arr[iterate] % 2 != 0) {
-            arrSize--;
-            int newNums = iterate;
-            for (newNums; newNums < arrSize; newNums++) {
-                arr[iterate + 1] = arr[iterate];
+        
+        // Assign current number to variable
+        int currentNum = arr[iterate];
+        
+        // if current number is odd --> replace it and reform sequence + decrease arrSize
+        if (currentNum % 2 > 0) {
+            for (int newNums = iterate; newNums <= arrSize; newNums++) {
+                arr[newNums] = arr[newNums + 1];
             }
+            arrSize--;
         }
     }
 }
 
 void splitParity(int arr[], int arrSize) {
-    
+    for (int currentPosition=0; currentPosition < arrSize; currentPosition++) {
+        
+        // Rename number at current position for code readability
+        int currentNum = arr[currentPosition];
+        
+        // Find position of current number in array
+        if (currentNum % 2 > 0 && currentPosition > 0) {
+            for (int currentPosition2=currentPosition; currentPosition2 > 0; currentPosition2--) {
+                
+                // if preceding number is odd --> assign current numbers position to currentposition2
+                if (arr[currentPosition2 - 1] % 2 > 0) {
+                    arr[currentPosition2] = currentNum;
+                    currentPosition2 = 0;
+                }
+                // else (even) --> currentNum comes before even number in sequence
+                else {
+                    arr[currentPosition2] = arr[currentPosition2 - 1];
+                    arr[currentPosition2 -1] = currentNum;
+                }
+            }
+        }
+    }
 }
