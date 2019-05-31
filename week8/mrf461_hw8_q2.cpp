@@ -16,17 +16,17 @@ int main() {
     
     string word;
     
-    cout<<"Please enter a word: ";
-    cin>>word;
+    cout << "Please enter a word: ";
+    cin >> word;
     
     // Test if word is palindrome + output proper statement
     bool palindromeTest = isPalindrome(word);
     
     if (palindromeTest == true) {
-        cout<<word<<" is a palindrome"<<endl;
+        cout << word << " is a palindrome" << endl;
     }
     else {
-        cout<<word<<" is not a palindrome"<<endl;
+        cout << word << " is not a palindrome" << endl;
     }
     
     return 0;

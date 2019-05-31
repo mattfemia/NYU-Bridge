@@ -31,7 +31,7 @@ void reverseArray(int arr[], int arrSize) {
 }
 
 void removeOdd(int arr[], int& arrSize) {
-    for (int iterate=0; iterate < arrSize; iterate++) {
+    for (int iterate = 0; iterate < arrSize; iterate++) {
         
         // Assign current number to variable
         int currentNum = arr[iterate];
@@ -47,14 +47,14 @@ void removeOdd(int arr[], int& arrSize) {
 }
 
 void splitParity(int arr[], int arrSize) {
-    for (int currentPosition=0; currentPosition < arrSize; currentPosition++) {
+    for (int currentPosition = 0; currentPosition < arrSize; currentPosition++) {
         
         // Rename number at current position for code readability
         int currentNum = arr[currentPosition];
         
         // Find position of current number in array
         if (currentNum % 2 > 0 && currentPosition > 0) {
-            for (int currentPosition2=currentPosition; currentPosition2 > 0; currentPosition2--) {
+            for (int currentPosition2 = currentPosition; currentPosition2 > 0; currentPosition2--) {
                 
                 // if preceding number is odd --> assign current numbers position to currentposition2
                 if (arr[currentPosition2 - 1] % 2 > 0) {
@@ -64,7 +64,7 @@ void splitParity(int arr[], int arrSize) {
                 // else (even) --> currentNum comes before even number in sequence
                 else {
                     arr[currentPosition2] = arr[currentPosition2 - 1];
-                    arr[currentPosition2 -1] = currentNum;
+                    arr[currentPosition2 - 1] = currentNum;
                 }
             }
         }

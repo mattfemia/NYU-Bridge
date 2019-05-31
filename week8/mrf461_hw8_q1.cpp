@@ -20,9 +20,9 @@ int main() {
     int intArray[SIZE];
     int currentInteger;
     
-    cout<<"Please enter 20 integers separated by a space: "<<endl;
+    cout << "Please enter 20 integers separated by a space: " << endl;
     for (int iterate = 0; iterate < SIZE; iterate++){
-        cin>>currentInteger;
+        cin >> currentInteger;
         intArray[iterate] = currentInteger;
     }
     
@@ -34,7 +34,7 @@ int main() {
     // Compare array of integers to minimum value to find matches
     for (int i = 0; i < SIZE; i++) {
         if (intArray[i] == minVal) {
-            cout<<i<<" ";
+            cout << i << " ";
         }
     }
     cout<<endl;
