@@ -12,26 +12,18 @@ using namespace std;
 
 string textToLower(string str);
 int wordCounter(string str);
-int letterCounter(char letter);
+void letterCounter(string str);
+string alphabetizeString(string str);
+void outputLetterCount(string str);
 
 int main(){
     string lineOfText;
-    int wordCount;
     
     cout << "Please enter a line of text: " << endl;
     getline(cin, lineOfText);
     
-    for (int x=0; x < lineOfText.length(); x++) {
-    }
-    
-    // Convert to lowercase
-    lineOfText = textToLower(lineOfText);
-    wordCount = wordCounter(lineOfText);
-    
-    cout << lineOfText << endl << "Word Count = " << wordCount << endl;
+    outputLetterCount(lineOfText);
 }
-
-// FUNCTIONS NEED TO WORK WITHIN ONE ANOTHER
 
 // Function to convert string to all lowercase
 string textToLower(string str){
@@ -50,6 +42,8 @@ string textToLower(string str){
 
 // Function to count words
 int wordCounter(string str){
+    str = textToLower(str);
+    
     int counter = 0;
     
     for (int letter = 0; letter < str.length(); letter++){
@@ -69,11 +63,84 @@ int wordCounter(string str){
     return counter;
 }
 
-// Function to alphabetize letters and remove punctuation + spaces
+// Alphabetize letters in word
+string alphabetizeString(string str){
+    string word = "";
+    const int LENGTH = str.length();
+    int alphabetized[LENGTH];
+    
+    
+    
+    
+    //    for (int counter = 1; counter < LENGTH; counter++){
+    //        int letter = int(str[counter]);
+    //        for (int counter2 = (counter - 2); counter2 < LENGTH; counter2++) {
+    //            int previousLetter = int(str[counter2]);
+    //            if ((previousLetter == 10) || (previousLetter == 32) || (previousLetter == 44) || (previousLetter == 46) || (letter <= previousLetter)){
+    //
+    //                cout << "counter2 = " << counter2 << " " << char(alphabetized[counter2 - 1]) << " ";
+    //                cout << "counter1 = " << counter << " " <<  char(alphabetized[counter - 1]) << endl;
+    //                alphabetized[counter2] = str[counter];
+    //                alphabetized[counter] = str[counter2];
+    //                cout << "counter2 = " << counter2 << " " << char(alphabetized[counter2]) << " ";
+    //                cout << "counter1 = " << counter << " " << char(alphabetized[counter]) << endl << endl;
+    //
+    //            }
+    //            else{
+    //                alphabetized[counter2] = str[counter2];
+    //                alphabetized[counter] = str[counter];
+    //            }
+    //        }
+    //    }
+    for (int x = 0; x < LENGTH; x++){
+        cout << alphabetized[x] << " ";
+        if ( (int(alphabetized[x]) != 10) && (int(alphabetized[x]) != 32) && (int(alphabetized[x]) != 44) && (int(alphabetized[x]) != 46) ){
+            word = word + char(alphabetized[x]);
+        }
+    }
+    
+    return word;
+}
 
 // Function to count letters
-int letterCounter(char letter){
-    int letterCount = 0;
+void letterCounter(string str){
+    int counter = 0;
+    string word = "";
     
-    return letterCount;
+    // Create string containing the letters, but not any repeated letters, that make up string str
+    for (int x = 0; x < str.length(); x++){
+        if ((int(str[x]) != 10) && (int(str[x]) != 32) && (int(str[x]) != 44) && (int(str[x]) != 46)) {
+            if (word.find(str[x]) == string::npos){
+                word = word + str[x];
+            }
+        }
+    }
+    
+    const int WORD_LENGTH = word.length();
+    
+    // Count number of instances and print out
+    for (int i = 0; i < word.length(); i++){
+        for (int j = 0; j <= str.length(); j++){
+            if (word[i] == str[j]) {
+                counter++;
+            }
+        }
+        cout << word[i] << "    " << counter << endl;
+        counter = 0;
+    }
 }
+
+void outputLetterCount(string str) {
+    str = textToLower(str);
+    
+    int count = wordCounter(str);
+    string word = "word";
+    if (count >= 2){
+        word = "words";
+    }
+    
+    cout << count << "    " << word << endl;
+    
+    letterCounter(str);
+}
+
