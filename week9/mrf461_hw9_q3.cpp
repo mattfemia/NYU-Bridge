@@ -14,9 +14,9 @@ void getPosNums2(int* arr, int arrSize, int*& outPossArr, int& outPosArrSize);
 
 int main(){
     
-    const int FRED = 5;
-    int frick = 9;
-    int *example = new int[FRED];
+    const int integer = 5;
+    int outputSizeExample = 15;
+    int *example = new int[integer];
     
     example[0] = 2;
     example[1] = -3;
@@ -24,9 +24,9 @@ int main(){
     example[3] = 43;
     example[4] = 23;
     
-    int outPosArrSize = frick;
+    int outPosArrSize = outputSizeExample;
     
-    int *newArray = getPosNums1(example, FRED, outPosArrSize);
+    int *newArray = getPosNums1(example, integer, outPosArrSize);
     cout << outPosArrSize << endl;
     for (int i = 0; i < outPosArrSize; i++){
         cout << *newArray + i << " ";
