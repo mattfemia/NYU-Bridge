@@ -65,45 +65,23 @@ int wordCounter(string str){
 
 // Alphabetize letters in word
 string alphabetizeString(string str){
-    string word = "";
-    const int LENGTH = str.length();
-    int alphabetized[LENGTH];
-    
-    
-    
-    
-    //    for (int counter = 1; counter < LENGTH; counter++){
-    //        int letter = int(str[counter]);
-    //        for (int counter2 = (counter - 2); counter2 < LENGTH; counter2++) {
-    //            int previousLetter = int(str[counter2]);
-    //            if ((previousLetter == 10) || (previousLetter == 32) || (previousLetter == 44) || (previousLetter == 46) || (letter <= previousLetter)){
-    //
-    //                cout << "counter2 = " << counter2 << " " << char(alphabetized[counter2 - 1]) << " ";
-    //                cout << "counter1 = " << counter << " " <<  char(alphabetized[counter - 1]) << endl;
-    //                alphabetized[counter2] = str[counter];
-    //                alphabetized[counter] = str[counter2];
-    //                cout << "counter2 = " << counter2 << " " << char(alphabetized[counter2]) << " ";
-    //                cout << "counter1 = " << counter << " " << char(alphabetized[counter]) << endl << endl;
-    //
-    //            }
-    //            else{
-    //                alphabetized[counter2] = str[counter2];
-    //                alphabetized[counter] = str[counter];
-    //            }
-    //        }
-    //    }
-    for (int x = 0; x < LENGTH; x++){
-        cout << alphabetized[x] << " ";
-        if ( (int(alphabetized[x]) != 10) && (int(alphabetized[x]) != 32) && (int(alphabetized[x]) != 44) && (int(alphabetized[x]) != 46) ){
-            word = word + char(alphabetized[x]);
+    str = textToLower(str);
+    for (int i = 0; i < str.length(); i++){
+        for(int j = (i + 1); j < str.length(); j++){
+            int temp;
+            if (int(str[i]) >= int(str[j])){
+                temp = int(str[j]);
+                str[j] = int(str[i]);
+                str[i] = temp;
+            }
         }
     }
-    
-    return word;
+    return str;
 }
 
 // Function to count letters
 void letterCounter(string str){
+    str = alphabetizeString(str);
     int counter = 0;
     string word = "";
     
@@ -131,7 +109,6 @@ void letterCounter(string str){
 }
 
 void outputLetterCount(string str) {
-    str = textToLower(str);
     
     int count = wordCounter(str);
     string word = "word";
@@ -143,4 +120,3 @@ void outputLetterCount(string str) {
     
     letterCounter(str);
 }
-
