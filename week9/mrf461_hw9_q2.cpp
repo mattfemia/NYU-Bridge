@@ -34,7 +34,7 @@ int main(){
     else {
         cout << str1 << " and " << str2 << " are NOT anagrams!" << endl;
     }
-    
+    return 0;
 }
 
 // Function to convert string to all lowercase

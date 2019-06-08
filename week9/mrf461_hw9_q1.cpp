@@ -23,6 +23,8 @@ int main(){
     getline(cin, lineOfText);
     
     outputLetterCount(lineOfText);
+    
+    return 0;
 }
 
 // Function to convert string to all lowercase
