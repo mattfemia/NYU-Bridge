@@ -1,0 +1,10 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /Users/matthewfemia/Developer/NYU-Bridge/review
+CMake Error at CMakeLists.txt:7 (add_executable):
+  add_executable cannot create target "review" because another target with
+  the same name already exists.  The existing target is an executable created
+  in source directory "/Users/matthewfemia/Developer/NYU-Bridge/review".  See
+  documentation for policy CMP0002 for more details.
+
+
+-- Configuring incomplete, errors occurred!
+See also "/Users/matthewfemia/Developer/NYU-Bridge/review/cmake-build-debug/CMakeFiles/CMakeOutput.log".

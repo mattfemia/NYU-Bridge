@@ -1,0 +1,5 @@
+/Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles/pointers.cpp.dir
+/Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles/testing.cpp.dir
+/Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles/okgo.cpp.dir
