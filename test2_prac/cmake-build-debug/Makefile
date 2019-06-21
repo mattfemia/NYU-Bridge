@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named recursion.cpp
+
+# Build rule for target.
+recursion.cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 recursion.cpp
+.PHONY : recursion.cpp
+
+# fast build rule for target.
+recursion.cpp/fast:
+	$(MAKE) -f CMakeFiles/recursion.cpp.dir/build.make CMakeFiles/recursion.cpp.dir/build
+.PHONY : recursion.cpp/fast
+
+#=============================================================================
 # Target rules for targets named pointers.cpp
 
 # Build rule for target.
@@ -203,6 +216,33 @@ pointers.cpp.s:
 	$(MAKE) -f CMakeFiles/pointers.cpp.dir/build.make CMakeFiles/pointers.cpp.dir/pointers.cpp.s
 .PHONY : pointers.cpp.s
 
+recursion.o: recursion.cpp.o
+
+.PHONY : recursion.o
+
+# target to build an object file
+recursion.cpp.o:
+	$(MAKE) -f CMakeFiles/recursion.cpp.dir/build.make CMakeFiles/recursion.cpp.dir/recursion.cpp.o
+.PHONY : recursion.cpp.o
+
+recursion.i: recursion.cpp.i
+
+.PHONY : recursion.i
+
+# target to preprocess a source file
+recursion.cpp.i:
+	$(MAKE) -f CMakeFiles/recursion.cpp.dir/build.make CMakeFiles/recursion.cpp.dir/recursion.cpp.i
+.PHONY : recursion.cpp.i
+
+recursion.s: recursion.cpp.s
+
+.PHONY : recursion.s
+
+# target to generate assembly for a file
+recursion.cpp.s:
+	$(MAKE) -f CMakeFiles/recursion.cpp.dir/build.make CMakeFiles/recursion.cpp.dir/recursion.cpp.s
+.PHONY : recursion.cpp.s
+
 testing.o: testing.cpp.o
 
 .PHONY : testing.o
@@ -238,6 +278,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... recursion.cpp"
 	@echo "... pointers.cpp"
 	@echo "... testing.cpp"
 	@echo "... okgo.cpp"
@@ -247,6 +288,9 @@ help:
 	@echo "... pointers.o"
 	@echo "... pointers.i"
 	@echo "... pointers.s"
+	@echo "... recursion.o"
+	@echo "... recursion.i"
+	@echo "... recursion.s"
 	@echo "... testing.o"
 	@echo "... testing.i"
 	@echo "... testing.s"

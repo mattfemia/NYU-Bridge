@@ -65,6 +65,43 @@ CMAKE_SOURCE_DIR = /Users/matthewfemia/Developer/NYU-Bridge/test2_prac
 CMAKE_BINARY_DIR = /Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug
 
 #=============================================================================
+# Target rules for target CMakeFiles/recursion.cpp.dir
+
+# All Build rule for target.
+CMakeFiles/recursion.cpp.dir/all:
+	$(MAKE) -f CMakeFiles/recursion.cpp.dir/build.make CMakeFiles/recursion.cpp.dir/depend
+	$(MAKE) -f CMakeFiles/recursion.cpp.dir/build.make CMakeFiles/recursion.cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target recursion.cpp"
+.PHONY : CMakeFiles/recursion.cpp.dir/all
+
+# Include target in all.
+all: CMakeFiles/recursion.cpp.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/recursion.cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/recursion.cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/recursion.cpp.dir/rule
+
+# Convenience name for target.
+recursion.cpp: CMakeFiles/recursion.cpp.dir/rule
+
+.PHONY : recursion.cpp
+
+# clean rule for target.
+CMakeFiles/recursion.cpp.dir/clean:
+	$(MAKE) -f CMakeFiles/recursion.cpp.dir/build.make CMakeFiles/recursion.cpp.dir/clean
+.PHONY : CMakeFiles/recursion.cpp.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/recursion.cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/pointers.cpp.dir
 
 # All Build rule for target.
@@ -108,7 +145,7 @@ clean: CMakeFiles/pointers.cpp.dir/clean
 CMakeFiles/testing.cpp.dir/all:
 	$(MAKE) -f CMakeFiles/testing.cpp.dir/build.make CMakeFiles/testing.cpp.dir/depend
 	$(MAKE) -f CMakeFiles/testing.cpp.dir/build.make CMakeFiles/testing.cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles --progress-num=5,6 "Built target testing.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/matthewfemia/Developer/NYU-Bridge/test2_prac/cmake-build-debug/CMakeFiles --progress-num=7,8 "Built target testing.cpp"
 .PHONY : CMakeFiles/testing.cpp.dir/all
 
 # Include target in all.
