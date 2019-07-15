@@ -22,6 +22,8 @@ public:
     string getNameOnCheck();
     void set(int new_checkNumber, double new_checkAmount, string new_nameOnCheck);
     
+    // Constructor
+    Account(int new_checkNumber, double new_checkAmount, string new_nameOnCheck) : checkNumber(new_checkNumber), checkAmount(new_checkAmount), nameOnCheck(new_nameOnCheck){}
 };
 
 int Account::getCheckNum(){
@@ -57,7 +59,7 @@ int main() {
     double currentCheckAmount;
     string currentNameOnCheck;
     
-    Account myAccount;
+    Account myAccount(0, 0, " ");
     cout << "Please enter the check number:" << endl;
     cin >> currentCheckNum;
     
@@ -75,6 +77,11 @@ int main() {
     cout << "Check #" << myAccount.getCheckNum() << endl;
     cout << "$" << myAccount.getCheckAmount() << endl;
     cout << "Submitted by: " << myAccount.getNameOnCheck() << endl;
+    
+    /* TODO */
+    // Make an array CheckBook
+    // Create input() and output() functions for all the cin and cout statements in main()
+    // Constify get functions
     
     return 0;
 }
