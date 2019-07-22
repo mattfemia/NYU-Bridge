@@ -16,10 +16,12 @@ private:
     double employeeNumber;
     double payRate;
 public:
-    // string getName() const return { string employeeName };
-    // double getNumber() const return { double employeeNumber };
-    // double getRate() const return { double payRate };
+    // Accessors
+    string getName() const { return employeeName; }
+    double getNumber() const { return employeeNumber; }
+    double getRate() const { return payRate; }
     
+    // Mutators
     string setEmployeeName();
     double setEmployeeNumber();
     double setPayRate();
@@ -30,19 +32,27 @@ int main(){
     return 0;
 }
 
-
-
+/* TODO: Give functionality to mutator functions  */
 string EmployeeData::setEmployeeName(){
     
+    string newEmployeeName = "";
     
+    return newEmployeeName;
 }
 
 double EmployeeData::setEmployeeNumber(){
+    
+    double newEmployeeNumber = 0;
+    
+    return newEmployeeNumber;
     
 }
 
 double EmployeeData::setPayRate(){
     
+    double newPayRate = 0;
+    
+    return newPayRate;
 }
 
 
